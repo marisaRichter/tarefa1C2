@@ -1,3 +1,4 @@
+var html = "";
 function calcular(){
 	var n = $("#rets").val();
 	var pt = 17 * 4;
@@ -6,7 +7,7 @@ function calcular(){
 	var f = new Array();
 	var a = 0;
 	var dx = 3/n;
-	var html = "<tr>"+
+	html += "<tr>"+
 					"<th>" + n + "</th>";
 	
 	for(var i = 1; i <= n; i++){
@@ -15,6 +16,6 @@ function calcular(){
 		a = a + (f[i] * dx);
 	}
 	html += "<th>" + a + "</th></tr>";
-	$(".table tbody").append(html);
+	$(".table tbody").html(html);
 	console.log("A = " + a);
 }
