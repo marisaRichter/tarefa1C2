@@ -1,5 +1,6 @@
 var html = "";
 function calcular(){
+	$(".table tbody").html("");
 	var n = $("#rets").val();
 	var pt = 17 * 4;
 	console.log("PT: " + pt + " - n " + n);
