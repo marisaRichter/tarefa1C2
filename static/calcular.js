@@ -7,6 +7,7 @@ function calcular(){
 	var c = new Array();
 	var f = new Array();
 	var a = 0;
+	var an = 0;
 	var dx = 3/n;
 	html += "<tr>"+
 					"<th>" + n + "</th>";
@@ -16,7 +17,10 @@ function calcular(){
 		f[i] = 3-(Math.pow(c[i],2))/3;
 		a = a + (f[i] * dx);
 	}
-	html += "<th>" + a + "</th></tr>";
+	
+	an = ( 6 + ( 9 / ( 2 * n ) ) - ( 3 / ( 2 * Math.pow(n,2) ) ) + (( ( 9 * pt ) / 10000 ) * (1/n)) * ( -100 + ( 100/n ) - ( pt/n ) ) );
+	html += "<th>" + a + "</th>";
+	html += "<th>" + an + "</th></tr>";
 	$(".table tbody").html(html);
 	console.log("A = " + a);
 }
